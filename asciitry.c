@@ -5,9 +5,14 @@
 #define GENISLIK 100
 #define UZUNLUK 33
 
-int main() {
+int main(int argc, char**argv) {
+    if (argc==1){
+        printf("ENTER FILE NAME\n");
+        return 1;
+    }
     FILE *txtfile = fopen("asci.txt", "r");
     if (!txtfile) {
+        printf("NO SUCH FILE\n");
         return 1;
     }
 
